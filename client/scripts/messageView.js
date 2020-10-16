@@ -1,4 +1,5 @@
 var MessageView = {
+  // turn indv message into DOM element
 
   render: _.template(`
       <!--
