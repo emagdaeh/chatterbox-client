@@ -24,7 +24,9 @@ var App = {
       Messages.scrubData(Messages.storage);
 
       Messages.storage.forEach(function(messageObj) {
-        MessagesView.renderMessage(messageObj);
+        if (messageObj.username && messageObj.text && messageObj.roomname) {
+          MessagesView.renderMessage(messageObj);
+        }
       });
     });
 
