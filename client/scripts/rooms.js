@@ -1,5 +1,3 @@
 var Rooms = {
-  // filter messages by .roomname
-
-
+  currentRoom: 'lobby'
 };
