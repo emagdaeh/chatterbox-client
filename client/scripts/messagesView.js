@@ -14,3 +14,4 @@ var MessagesView = {
   //add a friend function here
 
 };
+

@@ -1,11 +1,25 @@
 var Messages = {
   storage: [],
 
+  escapeObj: function(obj) {
+    if (obj.username) {
+      obj.username = obj.username.escape();
+    }
+    if (obj.text) {
+      obj.text = obj.text.escape();
+    }
+    if (obj.roomname) {
+      obj.roomname = obj.roomname.escape();
+    }
+  },
 
-
+  scrubData: function(data) {
+    data.forEach(function(obj) {
+      Messages.escapeObj(obj);
+    });
+  }
 
 };
-
 
 
 
