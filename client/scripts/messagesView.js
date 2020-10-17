@@ -4,7 +4,9 @@ var MessagesView = {
   $chats: $('#chats'),
 
   initialize: function() {
-    App.fetch(App.stopSpinner);
+    setInterval(function() {
+      App.fetch(App.stopSpinner);
+    }, 10000);
   },
 
   renderMessage: function(message) {

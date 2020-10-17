@@ -29,7 +29,7 @@ String.prototype.escape = function() {
     '>': '&gt;',
     '"': '&quot',
     '`': '&#96',
-    '\'': '&#x27',
+    '\'': '&#x27'
   };
   return this.replace(/[&<>]/g, function(tag) {
     return tagsToReplace[tag] || tag;
