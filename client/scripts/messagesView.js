@@ -5,9 +5,15 @@ var MessagesView = {
 
   initialize: function() {
     App.fetch(App.stopSpinner);
-    // setInterval(function() {
-    //   App.fetch(App.stopSpinner);
-    // }, 10000);
+
+    MessagesView.$chats.on('click', '.username', function() {
+      // saves the specific username they clicked on
+      var usernameClicked = $(this).text();
+
+      // passes that into the toggleStatus
+      Friends.toggleStatus(usernameClicked);
+    });
+
   },
 
   renderMessage: function(message) {
