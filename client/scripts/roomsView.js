@@ -6,9 +6,9 @@ var RoomsView = {
 
   initialize: function() {
     // add available rooms to select dropdown
-    RoomsView.$select.append("<option value='lobby'>Lobby</option>");
+    RoomsView.$select.append('<option value="lobby">Lobby</option>');
 
-    $('#rooms').append("<input type='text' id='newroomtextfield'>");
+    $('#rooms').append('<input type="text" id="newroomtextfield">');
     RoomsView.$button.on('click', Rooms.add);
 
     RoomsView.$select.on('change', function() {

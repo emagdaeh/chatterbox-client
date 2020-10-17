@@ -8,7 +8,7 @@ var Rooms = {
     if (newRoomName) {
       newRoomName.escape();
       Rooms.availableRooms.push(newRoomName);
-      RoomsView.$select.append("<option value='newRoomName'>newRoomName</option>");
+      RoomsView.$select.append('<option value="newRoomName">newRoomName</option>');
       $('#newroomtextfield').val('');
     }
   }
