@@ -5,16 +5,11 @@ var MessagesView = {
 
   initialize: function() {
     App.fetch(App.stopSpinner);
-    Messages.scrubData(Messages.storage);
-
-    Messages.storage.forEach(function(messageObj) {
-      MessagesView.renderMessage(messageObj);
-    });
   },
 
   renderMessage: function(message) {
-    var displayMessage = MessageView.render(message);
-    MessagesView.$chats.append(displayMessage);
+    var htmlMessage = MessageView.render(message);
+    MessagesView.$chats.append(htmlMessage);
   }
 
   //add a friend function here

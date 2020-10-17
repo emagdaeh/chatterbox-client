@@ -20,9 +20,12 @@ var App = {
   fetch: function(callback = ()=>{}) {
     Parse.readAll((data) => {
       callback();
-      setTimeout(function() {
-        Messages.storage = data.results;
-      }, 0);
+      Messages.storage = data.results;
+      Messages.scrubData(Messages.storage);
+
+      Messages.storage.forEach(function(messageObj) {
+        MessagesView.renderMessage(messageObj);
+      });
     });
 
   },
