@@ -1,3 +1,4 @@
 var Rooms = {
-  currentRoom: 'lobby'
+  currentRoom: 'lobby',
+  availableRooms: ['lobby', 'hobby']
 };

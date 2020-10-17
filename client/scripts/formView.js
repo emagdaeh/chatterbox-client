@@ -23,7 +23,7 @@ var FormView = {
     var message = {
       username: App.username,
       text: userMessage,
-      roomname: RoomsView.currentRoom
+      roomname: Rooms.currentRoom
     };
 
     Parse.create(message);
