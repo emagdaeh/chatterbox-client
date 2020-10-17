@@ -7,9 +7,9 @@ var RoomsView = {
   initialize: function() {
     // add available rooms to select dropdown
     RoomsView.$select.append("<option value='lobby'>Lobby</option>");
-    RoomsView.$select.append("<option value='hobby'>Hobby</option>");
 
-    $('.addroom').on('click', RoomsView.addRoom);
+    $('#rooms').append("<input type='text' id='newroomtextfield'>");
+    RoomsView.$button.on('click', Rooms.add);
 
     RoomsView.$select.on('change', function() {
       var selectedRoom = $(this).val();
@@ -19,20 +19,8 @@ var RoomsView = {
   },
 
   renderRoom: function(room) {
-    console.log(room);
-  // default room is lobby
-  // updates if user changes room/adds room
+    // change the currentRoom property of Room
+    // room is the roomname
+    // filter messages by roomname property
   },
-
-  addRoom: function() {
-    // the room that's appended should be whatever new room the user makes up?
-    // RoomsView.$select.append("<option value='lobby'>Lobby</option>");
-  }
-
-  // add room function here
-  // if user clicks on add room button, update Rooms.currentRoom
-  //FormView.$form.on('submit', FormView.handleSubmit); <--syntax model
-
-  // this should then trigger the render function
-
 };
