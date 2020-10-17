@@ -36,3 +36,12 @@ var App = {
     FormView.setStatus(false);
   }
 };
+
+// data returned from server is an obj with results property and that contains array of all of the message objs
+// store that data in storage property of Messages
+
+// in the messageView
+// iterate over this array of messages
+// for each message
+// pass it to template func in messageView - turns it into an html element
+// write a function in messagesView that takes these html elements and adds them to the DOM/displays to user
