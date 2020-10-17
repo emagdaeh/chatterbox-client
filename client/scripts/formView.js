@@ -19,7 +19,6 @@ var FormView = {
 
   handleMessageUserCreated: function() {
     var userMessage = $('#message').val();
-    // do something to escape submitted info for userMessage
 
     var message = {
       username: App.username,

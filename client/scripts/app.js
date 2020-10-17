@@ -19,11 +19,12 @@ var App = {
 
   fetch: function(callback = ()=>{}) {
     Parse.readAll((data) => {
-      // examine the response from the server request:
-      Messages.storage = data.results;
-      Messages.scrubData(Messages.storage);
       callback();
+      setTimeout(function() {
+        Messages.storage = data.results;
+      }, 0);
     });
+
   },
 
   startSpinner: function() {

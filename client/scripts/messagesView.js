@@ -4,11 +4,17 @@ var MessagesView = {
   $chats: $('#chats'),
 
   initialize: function() {
-    // Should call messageView in some way
+    App.fetch(App.stopSpinner);
+    Messages.scrubData(Messages.storage);
+
+    Messages.storage.forEach(function(messageObj) {
+      MessagesView.renderMessage(messageObj);
+    });
   },
 
-  render: function() {
-    //
+  renderMessage: function(message) {
+    var displayMessage = MessageView.render(message);
+    MessagesView.$chats.append(displayMessage);
   }
 
   //add a friend function here
